@@ -37,20 +37,31 @@ function removeLetter(){
     feedGame()
     click--
 }
-function checkLetter() {
+function pleaseWait (time) {
+    return new Promise(resolve => {
+        setTimeout(resolve, time)
+})
+}
+async function checkLetter() {
     if(click === 5 || click === 10 || click === 15 || click === 20 || click === 25){
         for(let b = 0; b < 5; b++){
+            
             for(let a = 0; a < 5; a++){
+                
            if(keyArray[b] === myArray[round][a].value){
                myArray[round][a].backgroundColor = 'yellow'
+               
                document.getElementById(myArray[round][a].value).style.backgroundColor === 'green' ? document.getElementById(myArray[round][a].value).style.backgroundColor = 'green' : document.getElementById(myArray[round][a].value).style.backgroundColor = 'yellow'
                 
                 }
                 if(document.getElementById(myArray[round][a].value).style.backgroundColor != 'green' && document.getElementById(myArray[round][a].value).style.backgroundColor != 'yellow'){
                     document.getElementById(myArray[round][a].value).style.backgroundColor = 'grey'
+                    myArray[round][a].backgroundColor = 'darkgrey'
             }
             
         }
+        document.getElementById(`test${round}${b}`).style.animation = "check .5s"
+                await pleaseWait(100)
         if(keyArray[b] === myArray[round][b].value){
             matches++
             console.log(`you have ${matches} correct`)
@@ -58,6 +69,7 @@ function checkLetter() {
             document.getElementById(myArray[round][b].value).style.backgroundColor = 'green'
             
         }
+        
     }
         feedGame()
         round++
@@ -67,30 +79,22 @@ function checkLetter() {
         matches = 0;
     }
 }
-function checkForWin(){
+async function checkForWin(){
     if(round === 5){
-        document.getElementById(`message${round+1}`).style.animation = 'marquee 3s'
+        document.getElementById(`message${round+1}`).style.animation = 'marquee 2s'
     }
-    if(matches === 1){
-        document.getElementById(`message${round}`).style.animation = 'appear 3s ease-out'
-        document.getElementById(`message${round}`).innerHTML = 'Not Quite...'  
-    }
-    if(matches === 2){
-        document.getElementById(`message${round}`).style.animation = 'appear 3s ease-out'
-        document.getElementById(`message${round}`).innerHTML = 'Almost'  
-    }
-    if(matches === 3){
-        document.getElementById(`message${round}`).style.animation = 'appear 3s ease-out'
-        document.getElementById(`message${round}`).innerHTML = 'Getting there...'  
-    }
-    if(matches === 4){
-        document.getElementById(`message${round}`).style.animation = 'appear 3s ease-out'
-        document.getElementById(`message${round}`).innerHTML = 'So close...'  
-    }
+   
     if(matches === 5){
+        await pleaseWait(1500)
         color()
         document.getElementById('keyboardCont').style.display = 'none';
         document.getElementById('winnerBanner').style.display = 'flex';
+        document.getElementById('win').style.display = 'flex'
+    } else if(round === 6) {
+        await pleaseWait(1500)
+        color()
+        document.getElementById('winnerBanner').style.display = 'flex';
+        document.getElementById('lose').style.display = 'flex'
     }
 }
   /*  if(testArray.length > 5 && testArray.length < 11){
@@ -310,4 +314,9 @@ document.getElementById('square42').style.backgroundColor = document.getElementB
 document.getElementById('square43').style.backgroundColor = document.getElementById('test42').style.backgroundColor
 document.getElementById('square44').style.backgroundColor = document.getElementById('test43').style.backgroundColor
 document.getElementById('square45').style.backgroundColor = document.getElementById('test44').style.backgroundColor
+document.getElementById('square51').innerHTML = keyArray[0]
+document.getElementById('square52').innerHTML = keyArray[1]
+document.getElementById('square53').innerHTML = keyArray[2]
+document.getElementById('square54').innerHTML = keyArray[3]
+document.getElementById('square55').innerHTML = keyArray[4]
 }
