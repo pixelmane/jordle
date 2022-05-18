@@ -49,8 +49,11 @@ async function checkLetter() {
             for(let a = 0; a < 5; a++){
                 
            if(keyArray[b] === myArray[round][a].value){
-               myArray[round][a].backgroundColor = 'yellow'
-               
+               if(myArray[round][a].backgroundColor === 'green') {
+                myArray[round][a].backgroundColor = 'green'
+               } else {
+                   myArray[round][a].backgroundColor = 'yellow'
+               }
                document.getElementById(myArray[round][a].value).style.backgroundColor === 'green' ? document.getElementById(myArray[round][a].value).style.backgroundColor = 'green' : document.getElementById(myArray[round][a].value).style.backgroundColor = 'yellow'
                 
                 }
