@@ -160,6 +160,7 @@ input:disabled {
     text-align: center;
     font-size: 4vw;
     padding: 0px;
+    border-radius: 10%;
 }
 
 #firstRow {
