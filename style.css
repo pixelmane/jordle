@@ -159,6 +159,7 @@ input:disabled {
     margin: .5vw;
     text-align: center;
     font-size: 4vw;
+    padding: 0px;
 }
 
 #firstRow {
