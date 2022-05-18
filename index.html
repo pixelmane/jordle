@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./style.css" rel="stylesheet">
+    
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>wordle</h1>
+    </header>
+    
+    <main id="gameCont">
+    <div id="theRow1">
+        <div id="test00"></div>
+        <div id="test01"></div>
+        <div id="test02"></div>
+        <div id="test03"></div>
+        <div id="test04"></div>
+        <div id="message1">potion</div>
+    </div>
+    <div id="theRow2">
+        <div id="test10"></div>
+        <div id="test11"></div>
+        <div id="test12"></div>
+        <div id="test13"></div>
+        <div id="test14"></div>
+        <div id="message2"></div>
+    </div>
+    <div id="theRow3">
+        <div id="test20"></div>
+        <div id="test21"></div>
+        <div id="test22"></div>
+        <div id="test23"></div>
+        <div id="test24"></div>
+        <div id="message3"></div>
+    </div>
+    <div id="theRow4">
+        <div id="test30"></div>
+        <div id="test31"></div>
+        <div id="test32"></div>
+        <div id="test33"></div>
+        <div id="test34"></div>
+        <div id="message4"></div>
+    </div>
+    <div id="theRow5">
+        <div id="test40"></div>
+        <div id="test41"></div>
+        <div id="test42"></div>
+        <div id="test43"></div>
+        <div id="test44"></div>
+        <div id="message5"></div>
+    </div><div id="theRow6">
+        <div id="test50"></div>
+        <div id="test51"></div>
+        <div id="test52"></div>
+        <div id="test53"></div>
+        <div id="test54"></div>
+        <div id="message6">Last chance!</div>
+    </div>
+       
+        
+        
+        
+      
+        
+        <div id="winnerBanner">
+            <div id="gameEnd">
+                <div id="square01"></div>
+                <div id="square02"></div>
+                <div id="square03"></div>
+                <div id="square04"></div>
+                <div id="square05"></div>
+                <div id="square11"></div>
+                <div id="square12"></div>
+                <div id="square13"></div>
+                <div id="square14"></div>
+                <div id="square15"></div>
+                <div id="square21"></div>
+                <div id="square22"></div>
+                <div id="square23"></div>
+                <div id="square24"></div>
+                <div id="square25"></div>
+                <div id="square31"></div>
+                <div id="square32"></div>
+                <div id="square33"></div>
+                <div id="square34"></div>
+                <div id="square35"></div>
+                <div id="square41"></div>
+                <div id="square42"></div>
+                <div id="square43"></div>
+                <div id="square44"></div>
+                <div id="square45"></div>
+                
+            </div>
+           
+        </div>
+        <div id="keyboardCont">
+            
+            <div id="firstRow">
+              <button id="Q" class="key" value="Q" onclick="makeLetter(this)">Q</button>
+              <button id="W" class="key" value="W" onclick="makeLetter(this)">W</button>
+              <button id="E" class="key" value="E" onclick="makeLetter(this)">E</button>
+              <button id="R" class="key" value="R" onclick="makeLetter(this)">R</button>
+              <button id="T" class="key" value="T" onclick="makeLetter(this)">T</button>
+              <button id="Y" class="key" value="Y" onclick="makeLetter(this)">Y</button>
+              <button id="U" class="key" value="U" onclick="makeLetter(this)">U</button>
+              <button id="I" class="key" value="I" onclick="makeLetter(this)">I</button>
+              <button id="O" class="key" value="O" onclick="makeLetter(this)">O</button>
+              <button id="P" class="key" value="P" onclick="makeLetter(this)">P</button>
+            </div>
+            <div id="secondRow">
+              <button id="A" class="key" value="A" onclick="makeLetter(this)">A</button>
+              <button id="S" class="key" value="S" onclick="makeLetter(this)">S</button>
+              <button id="D" class="key" value="D" onclick="makeLetter(this)">D</button>
+              <button id="F" class="key" value="F" onclick="makeLetter(this)">F</button>
+              <button id="G" class="key" value="G" onclick="makeLetter(this)">G</button>
+              <button id="H" class="key" value="H" onclick="makeLetter(this)">H</button>
+              <button id="J" class="key" value="J" onclick="makeLetter(this)">J</button>
+              <button id="K" class="key" value="K" onclick="makeLetter(this)">K</button>
+              <button id="L" class="key" value="L" onclick="makeLetter(this)">L</button>
+            </div>
+            <div id="thirdRow">
+              <button id="ENT" class="key" value="Z" onclick="checkLetter()">ENT</button>
+              <button id="Z" class="key" value="Z" onclick="makeLetter(this)">Z</button>
+              <button id="X" class="key" value="X" onclick="makeLetter(this)">X</button>
+              <button id="C" class="key" value="C" onclick="makeLetter(this)">C</button>
+              <button id="V" class="key" value="V" onclick="makeLetter(this)">V</button>
+              <button id="B" class="key" value="B" onclick="makeLetter(this)">B</button>
+              <button id="N" class="key" value="N" onclick="makeLetter(this)">N</button>
+              <button id="M" class="key" value="M" onclick="makeLetter(this)">M</button>
+              <button id="DEL" class="key" value="Z" onclick="removeLetter()">DEL</button>
+            </div>
+        </div>
+      
+      
+      
+    </main>
+    
+    <script src="./app.js"></script>
+
+</body>
+</html>

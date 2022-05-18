@@ -1,0 +1,287 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+h1 {
+    color: white;
+    background-color: black;
+    margin: 0;
+    padding: 10px auto;
+    font-size: 10vw;
+    
+}
+.entry[id^=answer] {
+    background-color: lightgray;
+    text-transform: lowercase;
+    
+}
+#gameEnd {
+    position:absolute;
+    top: 20vw;
+    left: 10vw;
+    right: 10vw;
+    
+    height: auto;
+    display: grid;
+    grid-template: repeat(5, 10vw) 10vw/ repeat(5, 10vw);
+    padding: 20px;
+    justify-content: center;
+    gap: 1vw;
+    background-color: rgba(0,0,0,.7);
+
+}
+[id^=square] {
+    background-color: white;
+    border: 1px solid black;
+}
+#youWin, #youLose {
+    display: none;
+}
+#winnerBanner h1 {
+   
+    border-radius: 10px;
+    padding: 5px;
+    grid-area: 6 / 1 / span 1 / span 5;
+    text-align: center;
+    
+    
+}
+#loserBanner h1 {
+      
+    border-radius: 10px;
+    padding: 5px;
+    grid-area: 6 / 1 / span 1 / span 5;
+    text-align: center;
+    
+}
+#winnerBanner {
+    display: none;
+   
+   
+}
+#loserBanner {
+    display: none;
+   
+}
+
+header {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+[id^=check] {
+    margin-bottom: 10px
+}
+#row1 {
+    display: flex;
+   
+    width: 100%;
+    font-size: 0;
+    
+    justify-content: center;
+}
+#gameCont {
+    display: grid;
+    
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#checkMe {
+    width: 40vw;
+    height: 10vw;
+    margin-top: 10px;
+    justify-self:center;
+    font-size: 3vw;
+    padding: 1vw;
+    
+}
+
+input:disabled {
+    opacity: 1;
+}
+.entry {
+    width: 15vw;
+    height: 15vw;
+    text-align: center;
+    margin: 0 2px;
+    color:black;
+    font-weight: bold;
+    font-size: 7vw;
+    justify-content: center;
+    position: relative; 
+    padding:0;
+    
+}
+@keyframes drop {
+   from {
+       top: -10px;
+   } 
+   to {
+       top: 0px;
+   }    
+}
+#check1 {
+    display: none;
+    position: relative;
+    justify-content: center;
+}
+
+#check2 {
+    display: none;
+    position: relative;
+    justify-content: center;
+}
+
+#check3 {
+    display: none;
+    justify-content: center;
+}
+
+#check4 {
+    display: none;
+    justify-content: center;
+}
+
+#check5 {
+    justify-content: center;
+    display: none;
+}
+
+.key {
+    width: 9vw;
+    height: 14vw;
+    background-color: 'green';
+    margin: .5vw;
+    text-align: center;
+    font-size: 4vw;
+}
+
+#firstRow {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: 5px 0px;
+}
+#secondRow {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: 5px 0px;
+}
+#thirdRow {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+#DEL, #ENT {
+    width: 12vw;
+}
+@keyframes borderBump {
+    0% {
+        border: 1vw solid black;
+    }
+    100% {
+        border: .5vw solid black;
+    }
+    
+}
+[id^=test] {
+    display: flex;
+    width: 12vw;
+    height: 12vw;
+    background-color: lightgray;
+    border: .5vw solid grey;
+    color: black; 
+    margin: .5vw;
+    font-size: 8vw;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+@keyframes appear {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+    
+}
+@keyframes marquee {
+    0% {
+        top: 0%;
+    }
+    25% {
+        top: 40%
+    }
+    75% {
+        top: 40%;
+    }
+    100% {
+        top: 150%;
+    }
+}
+#theRow1 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+#message1, #message2, #message3, #message4, #message5 {
+    position: absolute;
+    opacity: 0;
+    align-self: center;
+    color: white;
+    background-color: rgba(0,0,0,.7);
+    padding: 0px 10px;
+    border: 2px solid white;
+    border-radius: 10px;
+    font-size: 7vw;
+    
+}
+#message6 {
+    position: absolute;
+    top: -20%;
+    opacity: 1;
+    align-self: center;
+    color: white;
+    background-color: rgba(0,0,0);
+    padding: 0px 10px;
+    border: 2px solid white;
+    border-radius: 10px;
+    font-size: 10vw;
+}
+#theRow2 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#theRow3 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+#theRow4 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#theRow5 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#theRow6 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
