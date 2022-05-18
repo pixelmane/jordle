@@ -8,6 +8,7 @@ body {
 }
 button {
     color: black;
+    padding: 0px;
 }
 header h1 {
     color: white;
