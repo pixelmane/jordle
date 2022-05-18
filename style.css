@@ -6,10 +6,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     
 }
-button {
-    color: black;
-    padding: 0px;
-}
+
 header h1 {
     color: white;
     background-color: black;
@@ -311,4 +308,10 @@ input:disabled {
     justify-content: center;
     width: 100%;
 }
-
+button {
+    color: black;
+    padding: 0px;
+}
+* {
+    touch-action: manipulation;
+}
