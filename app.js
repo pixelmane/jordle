@@ -87,7 +87,7 @@ async function checkForWin(){
         document.getElementById(`message${round+1}`).style.animation = 'marquee 2s'
     }
    
-    if(matches === 5){
+    if(matches === 5 && matches !== 5){
         await pleaseWait(1500)
         color()
         document.getElementById('keyboardCont').style.display = 'none';
