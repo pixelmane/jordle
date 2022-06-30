@@ -11,7 +11,7 @@ for(let y = 0; y < 6; y++){
 }
 
 
-const keyArray = ['P','O','L','K','A']
+const keyArray = ['W','A','V','E','S']
 const testArray = []
 const testTestArray = []
 let matches = 0
